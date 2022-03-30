@@ -2,11 +2,11 @@ CC = gcc
 
 all: client server
 
-c: client.o
-	${CC} ${CFLAGS} -o c client.o
+client: client.o
+	${CC} ${CFLAGS} -o client client.o
 
-s: server.o
-	${CC} ${CFLAGS} -o s server.o
+server: serverMultiThread.o
+	${CC} ${CFLAGS} -pthread -o server serverMultiThread.o
 
 client.o: client.c
 	${CC} ${CFLAGS} -c client.c
@@ -14,5 +14,8 @@ client.o: client.c
 server.o: server.c
 	${CC} ${CFLAGS} -c server.c
 
+serverMultiThread.o: serverMultiThread.c
+	${CC} ${CFLAGS} -c serverMultiThread.c
+
 clean:
-	rm -f *.a *.o c s
+	rm -f *.a *.o client server
