@@ -11,9 +11,6 @@ server: serverMultiThread.o
 client.o: client.c
 	${CC} ${CFLAGS} -c client.c
 
-server.o: server.c
-	${CC} ${CFLAGS} -c server.c
-
 serverMultiThread.o: serverMultiThread.c
 	${CC} ${CFLAGS} -c serverMultiThread.c
 

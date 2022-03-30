@@ -35,7 +35,6 @@ int main() {
     } else
         printf("connected to the server..\n");
 
-    printf("type EXIT to disconnect");
 
     char serverMsg[1024];
     for (int i = 0; i < 5; ++i) {
