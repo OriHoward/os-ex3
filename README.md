@@ -5,13 +5,15 @@ The server.c file is not compiled in the makefile because we can't compile 2 mai
 The serverMultiThread.c is the server which handles multiple clients with threads as asked.  
 The client.c is the client  
 
+#### make all to comiple both server and client.
+
 ## How to run the serverMultiThread.c:
 make server -> ./server
 
 ## How to run the client:
 make client -> ./client
 
-make all to comiple both server and client.
+
 
 ## The server pings 5 times each client.
-## Short video with running example has been added.
+#### Short video with running example has been added.
